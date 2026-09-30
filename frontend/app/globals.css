@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f3f7fa;
+}
+
+body {
+  min-height: 100vh;
+  background: #f3f5f7;
+  color: #0b2239;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #b9e2ff;
+  color: #003963;
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-12;
+  }
+
+  .panel {
+    @apply rounded-lg border border-slate-200 bg-white p-5 sm:p-6;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.12em] text-ube-700;
+  }
+
+  .field-label {
+    @apply mb-2 block text-sm font-bold text-ink;
+  }
+
+  .text-field {
+    @apply min-h-12 w-full rounded-md border border-slate-300 bg-white px-3.5 text-sm text-ink outline-none transition placeholder:text-slate-400 focus:border-ube-600 focus:ring-2 focus:ring-ube-100;
+  }
+
+  .primary-button {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-ube-700 px-5 text-sm font-bold text-white transition hover:bg-ube-800 focus:outline-none focus:ring-2 focus:ring-ube-200 disabled:cursor-not-allowed disabled:bg-slate-300;
+  }
+
+  .secondary-button {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-slate-300 bg-white px-5 text-sm font-bold text-ink transition hover:border-ube-500 hover:text-ube-800 focus:outline-none focus:ring-2 focus:ring-ube-100 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .data-label {
+    @apply text-[11px] font-bold uppercase tracking-[0.08em] text-muted;
+  }
+
+  .data-value {
+    @apply mt-1 text-sm font-semibold text-ink;
+  }
+}
